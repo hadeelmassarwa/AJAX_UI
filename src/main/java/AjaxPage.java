@@ -9,7 +9,7 @@ public class AjaxPage extends MainPage {
 
     private final SelenideElement button = $x("//*[@id='ajaxButton']");
 
-    private static final SelenideElement AJAX_RESPONSE = $x("//*[@id='content']/p");
+    private static final SelenideElement AJAX_RESPONSE_TEXT = $x("//*[@id='content']/p");
 
 
     public void clickOnAjaxButton() {
@@ -21,7 +21,7 @@ public class AjaxPage extends MainPage {
     }
 
     public boolean getAjaxResponse() {
-        return AJAX_RESPONSE.getText().contains("Data loaded with AJAX get request.");
+        return AJAX_RESPONSE_TEXT.getText().contains("Data loaded with AJAX get request.");
     }
 
 }
